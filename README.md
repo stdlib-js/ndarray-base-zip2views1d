@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import zip2views1d from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-zip2views1d@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-zip2views1d/tags). For example,
+
+```javascript
 import zip2views1d from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-zip2views1d@v0.1.0-esm/index.mjs';
 ```
 
@@ -121,7 +126,7 @@ Each element in the returned array is a class instance having prototype properti
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@esm/index.mjs';
 import array2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-from-array@esm/index.mjs';
-import zip2views1d from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-zip2views1d@v0.1.0-esm/index.mjs';
+import zip2views1d from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-zip2views1d@esm/index.mjs';
 
 var x = array2ndarray( zeroTo( 10 ), 'row-major' );
 var y = array2ndarray( discreteUniform( x.length, -100, 100 ), 'row-major' );
