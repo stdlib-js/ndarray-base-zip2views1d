@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-base-zip2views1d",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Zip one or more one-dimensional ndarrays to an array of composite views.",
   "license": "Apache-2.0",
   "author": {
