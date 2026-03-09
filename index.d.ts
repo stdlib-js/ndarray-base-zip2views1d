@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,16 +16,33 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Collection, AccessorArrayLike, ArrayLike } from '@stdlib/types/array';
+import { typedndarray } from '@stdlib/types/ndarray';
 
 /**
-* Zip one or more one-dimensional ndarrays to an array of composite views.
+* Property key.
+*/
+type PropertyKey = string | number | symbol;
+
+/**
+* Zips one or more one-dimensional ndarrays to an array of composite views.
 *
-* @module @stdlib/ndarray-base-zip2views1d
+* ## Notes
+*
+* -   The function assumes that the list of ndarrays to be zipped all have the same length.
+* -   The list of provided labels should equal the number of ndarrays to be zipped.
+* -   Each view in the returned array shares the same memory as the corresponding elements in the input ndarrays. Accordingly, mutation of either an input ndarray or a view will mutate the other.
+*
+* @param arrays - list of ndarrays to be zipped
+* @param labels - list of labels
+* @returns output array
 *
 * @example
 * var array2ndarray = require( '@stdlib/ndarray-base-from-array' );
-* var zip2views1d = require( '@stdlib/ndarray-base-zip2views1d' );
 *
 * var x = array2ndarray( [ 1, 2, 3 ], 'row-major' );
 * var y = array2ndarray( [ 'a', 'b', 'c' ], 'row-major' );
@@ -59,12 +76,9 @@
 * var v = y.get( 1 );
 * // returns 'beep'
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function zip2views1d<T = unknown, U extends PropertyKey = PropertyKey>( arrays: ArrayLike<typedndarray<T>>, labels: Collection<U> | AccessorArrayLike<U> ): Array<Record<U, T>>;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = zip2views1d;
