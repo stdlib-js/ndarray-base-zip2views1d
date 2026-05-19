@@ -1,0 +1,5 @@
+"use strict";var g=function(t,e){return function(){return e||t((e={exports:{}}).exports,e),e.exports}};var y=g(function(S,q){
+var l=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),m=require('@stdlib/utils-define-read-write-accessor/dist'),N=require('@stdlib/array-base-copy/dist'),k=require('@stdlib/ndarray-base-ndarraylike2ndarray/dist'),O=require('@stdlib/ndarray-numel/dist');function _(t){return e;function e(){return t.get(this._i)}}function w(t){return e;function e(a){t.set(this._i,a)}}function x(t,e){var a,h,i,s,v,u,f,r;if(u=t.length,u<1)return[];for(i=[],r=0;r<u;r++)i.push(k(t[r]));if(f=O(i[0]),f<1)return[];s=N(e);function c(n){return l(this,"_i",n),this}for(r=0;r<u;r++)a=_(i[r]),h=w(i[r]),m(c.prototype,s[r],a,h);for(l(c.prototype,"toJSON",d),v=[],r=0;r<f;r++)v.push(new c(r));return v;function d(){var n,p,o;for(n={},o=0;o<u;o++)p=s[o],n[p]=this[p];return n}}q.exports=x
+});var J=y();module.exports=J;
+/** @license Apache-2.0 */
+//# sourceMappingURL=index.js.map
